@@ -6,6 +6,11 @@
             "Rizk\\Blog\\": "src/"
         }
     },
+    "authors": [
+        {
+            "name": "Rizk Ussef"
+        }
+    ],
     "require": {
         "mongodb/mongodb": "^1.17"
     }
