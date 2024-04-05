@@ -6,12 +6,6 @@
             "Rizk\\Blog\\": "src/"
         }
     },
-    "authors": [
-        {
-            "name": "Rizk Ussef",
-            "email": "rizkusgt67@gmail.com"
-        }
-    ],
     "require": {
         "mongodb/mongodb": "^1.17"
     }
