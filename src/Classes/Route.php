@@ -15,7 +15,12 @@ class Route{
         $this->url = $this->request->queryString();
         $parsedUrl = explode("/",$this->url);
         $this->controller = ucfirst($parsedUrl[0])."Controller";
-        $this->method = $parsedUrl[1];
+        if(strpos($parsedUrl[1],"&")!=false){
+            $parsedQuery = explode("&",$parsedUrl[1]);
+            $this->method = $parsedQuery[0];  
+        }else{
+            $this->method = $parsedUrl[1];
+        }
     }
 
     public function callMethod(){

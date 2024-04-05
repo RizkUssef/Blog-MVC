@@ -6,7 +6,7 @@ class Session{
     public function __construct(){
         session_start();
     }
-    public function setSession($key,$value){
+    public static function setSession($key,$value){
         $_SESSION[$key]=$value;
     }
     public static function getSession($key){
@@ -30,5 +30,10 @@ class Session{
         }else{
             return false;
         }
+    }
+
+    public static function csrfToken($key){
+        $csrf_token = bin2hex(random_bytes(32));
+        Session::setSession($key,$csrf_token);
     }
 }

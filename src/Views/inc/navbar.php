@@ -6,12 +6,16 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link" href="redirect/loginPage">Login</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="handle/logout.php">Logout</a>
-                </li>    
+                <?php use Rizk\Blog\Classes\Session;?>
+                <?php if(Session::checkSession("user_id")){ ?>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Blog MVC/public/logout/logoutHandle">Logout</a>
+                    </li>    
+                <?php } else{ ?>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Blog MVC/public/login/loginPage">Login</a>
+                    </li>
+                <?php } ?>
             </ul>
         </div>
     </div>
