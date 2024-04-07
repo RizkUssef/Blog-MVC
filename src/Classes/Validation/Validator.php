@@ -2,6 +2,6 @@
 
 namespace Rizk\Blog\Classes\Validation;
 
-interface Vaildator{
+interface Validator{
     public function check($key,$value);
 }

@@ -2,10 +2,10 @@
 
 namespace Rizk\Blog\Classes\Validation;
 
-use Rizk\Blog\Classes\Validation\Vaildator;
+use Rizk\Blog\Classes\Validation\Validator;
 use Rizk\Blog\Models\User;
 
-class Exists implements Vaildator{
+class Exists implements Validator{
     public function check($key, $value)
     {
         $userObject = new User;

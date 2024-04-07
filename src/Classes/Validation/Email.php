@@ -2,9 +2,9 @@
 
 namespace Rizk\Blog\Classes\Validation;
 
-use Rizk\Blog\Classes\Validation\Vaildator;
+use Rizk\Blog\Classes\Validation\Validator;
 
-class Email implements Vaildator{
+class Email implements Validator{
     public function check($key, $value)
     {
         if(!filter_var($value,FILTER_VALIDATE_EMAIL)){
